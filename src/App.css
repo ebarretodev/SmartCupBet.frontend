@@ -92,10 +92,15 @@ body {
 
 @media only screen and (max-width: 1360px) {
     .divTextIntro {
+        width: 90%;
         top: 50vh;
-        left: 10vw;
+        left: 6%;
     }
 
+    .logo{
+        width: 80%;
+        right: 10%;
+    }
     .divTextIntro .textIntro {
         font-size: 35px;
     }
