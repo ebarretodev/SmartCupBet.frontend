@@ -13,8 +13,10 @@ const LogoAndTimeRemaing = () => {
     })
 
     const calcTimeRemaing = () => {
-        let date_1 = new Date("11/09/2022")
+        let date_1 = new Date("November 09, 2022 00:00:00 GMT-3:00")
         let date_2 = new Date()
+        console.log(date_1)
+        console.log(date_2)
 
         let difference = date_1.getTime() - date_2.getTime()
 
