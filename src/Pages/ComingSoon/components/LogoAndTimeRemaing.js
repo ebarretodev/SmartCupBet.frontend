@@ -40,7 +40,6 @@ const LogoAndTimeRemaing = () => {
             minutesRemaing,
             secondsRemaing,
         })
-        console.log(timeNow)
     }
 
     useEffect(() => {

@@ -90,7 +90,7 @@ body {
     background: #85052c;
 }
 
-@media only screen and (max-width: 1800px) {
+@media only screen and (max-width: 1360px) {
     .divTextIntro {
         top: 50vh;
         left: 10vw;
