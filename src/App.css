@@ -1,0 +1,102 @@
+/*Fonts*/
+
+@font-face {
+    font-family: ErasBold;
+    src: url(./fonts/ERASBD.TTF);
+}
+
+/*General*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ErasBold;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+    overflow-x: hidden;
+    background-color: #357831;
+}
+
+.ant-layout {
+    background-image: url(./images/commingSoon/background_comingsoon.jpg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+
+    /* background: #357831 !important; */
+}
+
+.mainLayout .ant-layout-header {
+    background: #357831;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container-fluid {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 15px;
+}
+
+/*ComingSoon Screen*/
+.divTextIntro {
+    position: absolute;
+    top: 35vh;
+    left: 25vw;
+}
+
+.divTextIntro .textIntro {
+    font-size: 50px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    align-items: center;
+    position: absolute;
+    bottom: 5vh;
+    right: 10vw;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.logo .textRemainTime {
+    font-size: 30px;
+    position: relative;
+    top: -25px;
+}
+
+/*Scroll*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #a90c3c;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #85052c;
+}
+
+@media only screen and (max-width: 1800px) {
+    .divTextIntro {
+        top: 50vh;
+        left: 10vw;
+    }
+
+    .divTextIntro .textIntro {
+        font-size: 35px;
+    }
+}
