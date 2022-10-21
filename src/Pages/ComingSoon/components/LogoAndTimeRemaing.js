@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 const { Text } = Typography
 
 const LogoAndTimeRemaing = () => {
+    const [showTime, setShowTime] = useState(false)
     const [timeNow, setTimeNow] = useState({
         daysRemaing: 0,
         hoursRemaing: 0,
@@ -19,7 +20,7 @@ const LogoAndTimeRemaing = () => {
         console.log(date_2)
 
         let difference = date_1.getTime() - date_2.getTime()
-
+        
         let daysRemaing = Math.floor(difference / (1000 * 60 * 60 * 24))
         let hoursRemaing = Math.floor(
             (difference - daysRemaing * (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -42,6 +43,7 @@ const LogoAndTimeRemaing = () => {
             minutesRemaing,
             secondsRemaing,
         })
+        if (difference > 0) setShowTime(true)
     }
 
     useEffect(() => {
@@ -53,11 +55,11 @@ const LogoAndTimeRemaing = () => {
     return (
         <div className="logo">
             <img src={logo} alt="Smart cup bet logo" />
-            <Text className="textRemainTime">{`
+            {showTime && (<Text className="textRemainTime">{`
             ${timeNow.daysRemaing}days 
             ${timeNow.hoursRemaing.toString().padStart(2, "0")}h 
             ${timeNow.minutesRemaing.toString().padStart(2, "0")}m 
-            ${timeNow.secondsRemaing.toString().padStart(2, "0")}s`}</Text>
+            ${timeNow.secondsRemaing.toString().padStart(2, "0")}s`}</Text>)}
         </div>
     )
 }
