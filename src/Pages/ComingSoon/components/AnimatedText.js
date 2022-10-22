@@ -10,7 +10,7 @@ const AnimatedText = () => {
     const changeText = () => {
         setTimeout(() => {
             setIndex((index + 1) % 3)
-        }, 2500)
+        }, 3000)
     }
 
     const transitions = useTransition(index, {
@@ -26,8 +26,8 @@ const AnimatedText = () => {
         transRef.start()
     }, [index])
 
-    const textsUp = ["Coming soon!", "Estamos Chegando!", "Estamos llegando!"]
-    const textsDown = ["You bet.", "Pode Apostar.", "Puede apostar."]
+    const textsUp = ["Coming soon!", "Estamos chegando!", "¡Estamos llegando!"]
+    const textsDown = ["You bet.", "Pode apostar.", "Puede apostar."]
 
   return (
       <>
