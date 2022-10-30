@@ -29,19 +29,18 @@ const AnimatedText = () => {
     const textsUp = ["Coming soon!", "Estamos chegando!", "¡Estamos llegando!"]
     const textsDown = ["You bet.", "Pode apostar.", "Puede apostar."]
 
-  return (
-      <>
-          {transitions((style, i) => {
-              return (
-                  <animated.div className="divTextIntro" style={style}>
-                      <Text className="textIntro">{textsUp[i]} </Text> <br />
-                      <Text className="textIntro">{textsDown[i]} </Text>
-                  </animated.div>
-              )
-          })}
-      </>
-  )
+    return (
+        <>
+            {transitions((style, i) => {
+                return (
+                    <animated.div className="divTextIntro" style={style}>
+                        <Text className="textIntro">{textsUp[i]} </Text> <br />
+                        <Text className="textIntro">{textsDown[i]} </Text>
+                    </animated.div>
+                )
+            })}
+        </>
+    )
 }
-
 
 export default AnimatedText
