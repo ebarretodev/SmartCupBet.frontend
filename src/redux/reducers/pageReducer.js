@@ -3,11 +3,12 @@ import { createSlice } from '@reduxjs/toolkit'
 const slice = createSlice({
     name: 'page',
     initialState: {
-        launched: false
+        //TODO correct form to false
+        launched: true
     },
     reducers: {
         setLaunched: (state, action) => {
-            state.address = action.payload
+            state.launched = action.payload
         },
     }
 })

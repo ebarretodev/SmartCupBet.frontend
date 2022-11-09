@@ -1,13 +1,12 @@
 import LogoAndTimeRemaing from "./components/LogoAndTimeRemaing"
 import AnimatedText from "./components/AnimatedText"
-import { Layout } from "antd"
 
 function ComingSoon() {
     return (
-        <Layout>
+        <div className="comingSoonLayout">
             <AnimatedText />
             <LogoAndTimeRemaing />
-        </Layout>
+        </div>
     )
 }
 

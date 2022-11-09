@@ -5,6 +5,16 @@
     src: url(./fonts/ERASBD.TTF);
 }
 
+@font-face {
+    font-family: FraBk;
+    src: url(./fonts/FRABK.TTF);
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(./fonts/AvenirLTStd-Black.otf);
+}
+
 /*General*/
 body {
     margin: 0;
@@ -13,12 +23,30 @@ body {
     font-family: ErasBold;
     font-size: 16px;
     line-height: 1.6;
-    color: #fff;
     overflow-x: hidden;
-    background-color: #357831;
+    background-color: #430828;
 }
 
-.ant-layout {
+.fontErasBold {
+    font-family: ErasBold;
+}
+
+.fontFraBk {
+    font-family: FraBk;
+}
+
+.fontAvenir {
+    font-family: Avenir;
+}
+
+.flexHorizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comingSoonLayout {
     background-image: url(./images/commingSoon/background_comingsoon.jpg);
     background-repeat: no-repeat;
     background-position: left top;
@@ -29,8 +57,80 @@ body {
     /* background: #357831 !important; */
 }
 
-.mainLayout .ant-layout-header {
-    background: #357831;
+.divCarrouselFix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 500;
+}
+
+.carrousel {
+    height: 100vh;
+    /* background-image: url(./images/Home/carroussel_1-v6.svg); */
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 100%;
+    display: flex;
+}
+
+.carrousel-title {
+    position: absolute;
+    top: 35vh;
+    right: 10vw;
+}
+
+.carrousel2-title {
+    top: 30vh;
+}
+
+.bg-31074D {
+    background-color: #31074d;
+    padding: 20px 0;
+}
+
+.bg-31074D-transparent {
+    background-image: linear-gradient(to right,rgba(49, 7, 77, 1), rgba(49, 7, 77, 0));
+    padding: 10px 0;
+}
+
+.bg-FB004D-transparent {
+    background-image: linear-gradient(to right, rgba(251, 0, 77, 1), rgba(251, 0, 77, 0));
+    padding: 10px 0;
+}
+
+.bg-FB004D-31074D {
+    background-image: linear-gradient(to right, rgba(251, 0, 77, 1), rgba(49, 7, 77, 1));
+    padding: 10px 0;
+}
+
+.bg-432808-transparent {
+    background-image: linear-gradient(to right, rgba(67, 8, 40, 1), rgba(251, 0, 77, 0));
+    padding: 10px 0;
+}
+
+.bg-432808-31074D {
+    background-image: linear-gradient(to right, rgba(67, 8, 40, 1), rgba(49, 7, 77, 1));
+    padding: 10px 0;
+}
+
+.carrousel-text {
+    flex: 1;
+    align-self: flex-end;
+}
+
+.bt-makebet {
+    margin-left: 15%;
+    font-size: 20px;
+    height: fit-content;
+}
+
+.ant-layout {
+    background: #430828 !important;
+}
+
+.mainLayout {
+    background: #430828;
     padding: 0;
     line-height: 1.6;
 }
@@ -40,6 +140,7 @@ body {
     max-width: 1170px;
     padding: 0 15px;
 }
+
 
 /*ComingSoon Screen*/
 .divTextIntro {
@@ -72,6 +173,230 @@ body {
     top: -25px;
 }
 
+/*Backgrounds*/
+.bg-A90C3C {
+    background-color: #a90c3c;
+    padding: 20px 0;
+}
+
+.bg-FFFFFF {
+    background-color: #ffffff;
+    padding: 20px 0;
+    color: #000;
+}
+
+.bg-FB004D {
+    background-color: #fb004d;
+    padding: 20px 0;
+}
+
+/*header*/
+
+.header-divider {
+    border-left: 2px solid #430828;
+    height: 1.5em;
+}
+
+.header-logo {
+    padding-top: 10px;
+}
+.header-logo img {
+    padding: 5px;
+    height: 250px;
+}
+
+.ant-layout-header {
+    position: absolute;
+    z-index:999;
+    width: 100%;
+    background-color: #ffffff70;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 50px;
+    color: #430828;
+}
+
+.header .ant-anchor-ink {
+    display: none;
+}
+
+.ant-anchor-link {
+    padding: 4px 8px;
+}
+
+.ant-anchor-link-title {
+    color: #430828;
+}
+
+.ant-anchor-link :hover {
+    opacity: 0.7;
+}
+
+.ant-anchor-link-active .ant-anchor-link-title,
+.ant-anchor-link-title-active:after,
+.ant-anchor-link-title-active:before {
+    color: #430828;
+}
+
+.header {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ant menu */
+.ant-menu {
+    font-family: ErasBold;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    background: none !important;
+}
+
+.ant-menu li.ant-menu-item-selected,
+.ant-menu li.ant-menu-item:hover {
+    opacity: 0.7;
+    background: none;
+}
+
+.ant-menu li.ant-menu-item:before,
+.ant-menu li.ant-menu-item:after {
+    content: "";
+    width: 1px;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+.bt-login,
+.bt-login:focus {
+    background-color: #a90c3c;
+    margin-left: 10px;
+    border: none;
+}
+
+.bt-login:hover {
+    opacity: 0.7;
+}
+
+.header .menu {
+    display: flex;
+    align-items: center;
+}
+
+/*Footer*/
+.ant-layout-footer {
+    background-color: #430828;
+    height: 50px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    font-family: ErasBold;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.goTop svg {
+    width: 50px;
+    height: 50px;
+    color: #fb004d;
+}
+
+.goTop :hover {
+    opacity: 0.7;
+}
+
+/*What is it*/
+.left-div {
+    flex: 1;
+}
+
+.right-div {
+    flex: 0.75;
+}
+
+/*Who we are*/
+
+.ourteam {
+    display: flex;
+    flex-direction: column;
+}
+
+.ourteam-text {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.ourteam-text span {
+    margin-top: 15px;
+}
+
+.ourteam {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    border-radius: 25px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 25px 10px;
+    padding: 30px 50px;
+    min-height: 380px;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+}
+
+cardA :hover {
+    background-color: #525252;
+}
+
+.card-text {
+    font-family: FraBk;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+}
+
+.card .text {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+    margin-left: 5px;
+    padding-top: 2px;
+}
+
+/*Responsible mobile menu*/
+
+.mobileHidden {
+    display: block;
+}
+
+.mobileVisible {
+    display: none;
+}
+
 /*Scroll*/
 
 /* width */
@@ -94,14 +419,47 @@ body {
     .divTextIntro {
         width: 90%;
         top: 50vh;
-        left: 6%;   
+        left: 6%;
     }
 
-    .logo{
+    .logo {
         width: 80%;
         right: 10%;
     }
     .divTextIntro .textIntro {
         font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .mobileVisible {
+        display: block;
+    }
+
+    .mobileHidden {
+        display: none;
+    }
+
+    .carrousel {
+        height: 100vh;
+        background-position: top center;
+        background-size: auto;
+    }
+
+    .carrousel-title {
+        top: 30vh;
+    }
+    .carrousel1-image {
+        background-position: center top;
+    }
+    .carrousel1-title {
+        top: 20vh;
+        right: 5vw
+        ;
+    }
+
+    .right-div {
+        flex: 1;
+        margin-left: 10vw;
     }
 }

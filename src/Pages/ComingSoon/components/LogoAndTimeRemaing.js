@@ -2,9 +2,12 @@ import React from "react"
 import logo from "../images/logo.png"
 import { Typography } from "antd"
 import { useEffect, useState } from "react"
+import { useDispatch } from "react-redux"
+import { setLaunched } from "../../../redux/reducers/pageReducer"
 const { Text } = Typography
 
 const LogoAndTimeRemaing = () => {
+    const dispatch = useDispatch()
     const [showTime, setShowTime] = useState(false)
     const [timeNow, setTimeNow] = useState({
         daysRemaing: 0,
@@ -14,7 +17,7 @@ const LogoAndTimeRemaing = () => {
     })
 
     const calcTimeRemaing = () => {
-        let date_1 = new Date("November 09, 2022 00:00:00 GMT-3:00")
+        let date_1 = new Date("November 12, 2022 00:00:00 GMT-3:00")
         let date_2 = new Date()
 
         let difference = date_1.getTime() - date_2.getTime()
@@ -41,7 +44,11 @@ const LogoAndTimeRemaing = () => {
             minutesRemaing,
             secondsRemaing,
         })
-        if (difference > 0) setShowTime(true)
+        if (difference > 0) {
+            setShowTime(true)
+        } else {
+            dispatch(setLaunched(true))
+        }
     }
 
     useEffect(() => {
