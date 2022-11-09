@@ -4,7 +4,7 @@ const slice = createSlice({
     name: 'page',
     initialState: {
         //TODO correct form to false
-        launched: true
+        launched: false
     },
     reducers: {
         setLaunched: (state, action) => {
