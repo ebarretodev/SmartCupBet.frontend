@@ -17,7 +17,7 @@ const LogoAndTimeRemaing = () => {
     })
 
     const calcTimeRemaing = () => {
-        let date_1 = new Date("November 12, 2022 00:00:00 GMT-3:00")
+        let date_1 = new Date("November 14, 2022 14:00:00 GMT-3:00")
         let date_2 = new Date()
 
         let difference = date_1.getTime() - date_2.getTime()
