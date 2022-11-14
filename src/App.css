@@ -84,6 +84,11 @@ body {
     top: 30vh;
 }
 
+.carrousel3-title{
+    right: 25vw;
+    top: 35vh;
+}
+
 .bg-31074D {
     background-color: #31074d;
     padding: 20px 0;
@@ -241,7 +246,7 @@ body {
 .header {
     height: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -286,20 +291,66 @@ body {
 
 /*Footer*/
 .ant-layout-footer {
-    background-color: #430828;
-    height: 50px;
+    background-color: #31202A;
+    
 }
 .footer {
     display: flex;
     justify-content: space-between;
 }
 
-.copyright {
+.footer-divider{
+    border-left: 2px solid #725E69;
+    height: 20em;
+}
+
+.ant-anchor-ink{
+    display: none;
+}
+
+.ant-anchor-link-active .ant-anchor-link-title, 
+.ant-anchor-link-title-active:after, .ant-anchor-link-title-active:before{
+    color: #725E69;
+}
+
+.footer-images{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.footer-images svg {
+    margin-left: 35px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    color: #856D7B;
+}
+
+.footer a {
+    color: #856D7B;
+    width: fit-content;
+}
+
+.footer a :hover{
+    opacity: 0.7;
+}
+
+.footer-images img{
+    height: 8vh;
+}
+.copyright {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     font-family: ErasBold;
     font-size: 12px;
     font-weight: bold;
+    color: #856D7B;
+
 }
 
 .goTop svg {
@@ -387,10 +438,32 @@ cardA :hover {
     padding-top: 2px;
 }
 
+/* Page BetPlace */
+.betplace{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.betplace-sider{
+    flex: .25;
+}
+
+.betplace-main{
+    flex: .73;
+}
+
+.little-flag{
+    width: 30px;
+}
+
 /*Responsible mobile menu*/
 
 .mobileHidden {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
 }
 
 .mobileVisible {
@@ -413,6 +486,11 @@ cardA :hover {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #85052c;
+}
+
+/* Notifications*/
+.ant-notification-notice-message, .ant-notification-notice-description {
+    color: #555;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -454,8 +532,18 @@ cardA :hover {
     }
     .carrousel1-title {
         top: 20vh;
-        right: 5vw
-        ;
+        right: 5vw;
+    }
+    .carrousel3-title{
+        top: 40vh;
+        right: 10vw;
+    }
+    .carrousel4{
+        background-position: left 25% top;
+    }
+    .carrousel4-title{
+        top: 45vh;
+        right: 10vw;
     }
 
     .right-div {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { Typography, Button } from "antd"
 import CarrousselImage from "../../../images/Home/Carrossel02.jpg"
 import { useMediaQuery } from "../../../hooks/useMediaQuery"

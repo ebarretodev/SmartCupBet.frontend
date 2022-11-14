@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { Typography, Button } from "antd"
 import CarrousselImage from "../../../images/Home/Carrossel04.jpg"
 import { useMediaQuery } from "../../../hooks/useMediaQuery"
@@ -10,15 +10,15 @@ function Carroussel4() {
     const handleLogin = () => {}
 
     return (
-        <div className="carrousel" style={{ backgroundImage: `url(${CarrousselImage})` }}>
-            <div className="carrousel-title">
+        <div className="carrousel carrousel4" style={{ backgroundImage: `url(${CarrousselImage})` }}>
+            <div className="carrousel-title carrousel4-title">
                 <Title
                     className="fontAvenir "
                     style={{
                         color: "white",
                         marginBottom: "0px",
                         marginTop: "0px",
-                        fontSize: isMobileScreen ? 70 : 90,
+                        fontSize: isMobileScreen ? 65 : 90,
                         textShadow: "1px 1px 7px #000",
                         lineHeight: isMobileScreen ? 1 : 0.8,
                     }}
@@ -31,7 +31,7 @@ function Carroussel4() {
                         color: "#fb004d",
                         marginBottom: "0px",
                         marginTop: "0px",
-                        fontSize: isMobileScreen ? 55 : 70,
+                        fontSize: isMobileScreen ? 50 : 70,
                         textShadow: "1px 1px 7px #000",
                         lineHeight: 0.8,
                     }}

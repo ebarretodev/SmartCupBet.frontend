@@ -1,6 +1,6 @@
 import { Layout } from "antd"
 import React from "react"
-import AppFooter from "./components/Footer"
+import AppFooter from "../common/Footer"
 import AppHeader from "./components/Header"
 import Carroussel from './components/Carroussel';
 import AppWhatIsIt from "./components/AppWhatIsIt";

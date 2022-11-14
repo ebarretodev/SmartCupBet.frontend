@@ -9,16 +9,15 @@ function Carroussel3() {
     const handleLogin = () => {}
     return (
         <div className="carrousel" style={{ backgroundImage: `url(${CarrousselImage})` }}>
-            <div className="carrousel-title">
+            <div className="carrousel-title carrousel3-title">
                 <Title
                     className="fontAvenir "
                     style={{
                         color: "white",
                         marginBottom: "0px",
                         marginTop: 0,
-                        fontSize: 70,
                         textShadow: "1px 1px 7px #000",
-                        fontSize: isMobileScreen ? 30 : 80,
+                        fontSize: isMobileScreen ? 60 : 80,
                         lineHeight: isMobileScreen ? 1 : 0.8,
                     }}
                 >
@@ -30,9 +29,8 @@ function Carroussel3() {
                         color: "#fb004d",
                         marginBottom: "0px",
                         marginTop: 0,
-                        fontSize: 50,
                         textShadow: "1px 1px 7px #000",
-                        fontSize: isMobileScreen ? 30 : 50,                        
+                        fontSize: isMobileScreen ? 40 : 50,                        
                         lineHeight: isMobileScreen ? 1 : 0.8,
                         letterSpacing: "-4px",
                     }}
@@ -45,9 +43,8 @@ function Carroussel3() {
                         color: "white",
                         marginBottom: "0px",
                         marginTop: 0,
-                        fontSize: 70,
                         textShadow: "1px 1px 7px #000",
-                        fontSize: isMobileScreen ? 30 : 70,
+                        fontSize: isMobileScreen ? 50 : 70,
                         lineHeight: isMobileScreen ? 1 : 0.8,
                     }}
                 >

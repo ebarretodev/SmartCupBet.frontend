@@ -6,14 +6,11 @@ import Carroussel3 from "./Carroussel3"
 import Carroussel4 from "./Carroussel4"
 import { useTransition, useSpringRef, animated, config } from "react-spring"
 
-// const pages = [
-//     () => <Carroussel1 />,
-//     () => <Carroussel2 />,
-//     () => <Carroussel3 />,
-//     () => <Carroussel4 />,
-// ]
 const pages = [
+    () => <Carroussel1 />,
     () => <Carroussel2 />,
+    () => <Carroussel3 />,
+    () => <Carroussel4 />,
 ]
 
 function Carroussel() {
@@ -51,8 +48,7 @@ function Carroussel() {
 
     const changeScreen = () => {
         setTimeout(() => {
-            // setIndex((index + 1) % 4)
-            setIndex(0)
+            setIndex((index + 1) % 4)
         }, 5000)
     }
 
@@ -63,7 +59,7 @@ function Carroussel() {
                 changeScreen()
             }
         }
-    }, [index, visiblePage, visibleCarousel])
+    }, [index, visibleCarousel, visiblePage])
 
     return (
         <div
