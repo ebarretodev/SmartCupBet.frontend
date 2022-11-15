@@ -13,7 +13,6 @@ const useEthBalance = () => {
     const fetchBalance = useCallback(async () => {
         if (signer !== null) {
             const address = await signer.getAddress();
-            console.log(address);
             const rawBalance = await provider.getBalance(address);
             const value = parseFloat(ethers.utils.formatEther(rawBalance));
             setBalance(value);

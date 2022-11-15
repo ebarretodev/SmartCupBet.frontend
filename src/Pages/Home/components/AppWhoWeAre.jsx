@@ -1,8 +1,8 @@
 import React from "react"
 import { Row, Col, Typography } from "antd"
 import { FaLinkedinIn, FaGithub, FaTwitter, FaDiscord } from "react-icons/fa"
-import RafaelImage from "../../../images/team/Rafael.png"
-import EliabelImage from "../../../images/team/Eliabel.png"
+import RafaelImage from "../../../images/team/Rafael.jpg"
+import EliabelImage from "../../../images/team/Eliabel.jpeg"
 
 const { Title, Text } = Typography
 
@@ -11,9 +11,10 @@ function AppWhoWeAre() {
         {
             name: "Rafael Machtura",
             img: RafaelImage,
-            linkedin: "https://www.linkedin.com/in/eliabelbarreto/",
-            twitter: "https://twitter.com/eliabeljunior",
-            github: "https://github.com/ebarretodev/",
+            linkedin: "https://www.linkedin.com/in/rafaelmachtura/",
+            twitter: "https://twitter.com/MachturaRafael",
+            github: "https://github.com/rafaelmachtura/",
+            discord: "https://discordapp.com/users/rafaelmachtura#1999",
         },
         {
             name: "Eliabel Barreto",
@@ -21,7 +22,7 @@ function AppWhoWeAre() {
             linkedin: "https://www.linkedin.com/in/eliabelbarreto/",
             twitter: "https://twitter.com/eliabeljunior",
             github: "https://github.com/ebarretodev/",
-            discord: "https://",
+            discord: "https://discordapp.com/users/ebarreto#4376",
         },
     ]
     return (
@@ -46,7 +47,7 @@ function AppWhoWeAre() {
                         <Col md={{ span: 8 }}>
                             <div className="card">
                                 <div>
-                                    <img src={person.img} alt={person.name} />
+                                    <img style={{ objectFit: 'cover', objectPosition: '56% 0'}} src={person.img} alt={person.name} />
                                 </div>
                                 <div className="text">
                                     <Text className="card-text">{person.name} </Text>
