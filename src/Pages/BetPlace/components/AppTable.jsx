@@ -1,7 +1,6 @@
 import React from "react"
-import { Space, Table, Tag } from "antd"
+import { Space, Table, Button } from "antd"
 import { data } from "./constants"
-import imgQatar from "../../../images/flags/flag_qatar.jpg"
 
 const columns = [
     {
@@ -17,19 +16,28 @@ const columns = [
         render: (_, record) => {
             return (
                 <p>
-                    <img
-                        src={`/images/flags/flag_${record.teamA}.jpg`}
-                        alt="team A"
-                        className="little-flag"
-                    />{" "}
+                    {record.teamA === "TBD" ? (
+                        <>{record.teamA}</>
+                    ) : (
+                        <img
+                            src={`/images/flags/flag_${record.teamA}.jpg`}
+                            alt="team B"
+                            className="little-flag"
+                        />
+                    )}{" "}
                     X{" "}
-                    <img
-                        src={`/images/flags/flag_${record.teamB}.jpg`}
-                        alt="team B"
-                        className="little-flag"
-                    />
+                    {record.teamB === "TBD" ? (
+                        <>{record.teamB}</>
+                    ) : (
+                        <img
+                            src={`/images/flags/flag_${record.teamB}.jpg`}
+                            alt="team B"
+                            className="little-flag"
+                        />
+                    )}
                 </p>
-            )},
+            )
+        },
     },
     {
         title: "Date",
@@ -43,7 +51,7 @@ const columns = [
         key: "action",
         render: (_, record) => (
             <Space size="middle">
-                <p>Make a Bet</p>
+                <Button className="bt-login" >Make a Bet</Button>
             </Space>
         ),
     },

@@ -18,9 +18,10 @@ const Home = () => {
                 <div
                     style={{
                         backgroundImage: `url(${BackgroundImage})`,
-                        backgroundRepeat: "no-repeat",
+                        backgroundRepeat: "repeat",
                         backgroundPosition: "top right",
                         backgroundSize: "100%",
+                        paddingBottom: 10
                     }}
                 >
                     <div className="container-fluid" style={{ paddingTop: 120 }}>
