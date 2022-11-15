@@ -26,9 +26,9 @@ const AppHeader = () => {
                         Address: {account.slice(0, 5).toUpperCase()}...
                         {account.slice(account.length - 2).toUpperCase()}
                     </div>
-                    <div>Balance: {balance} MATIC</div>
-                    <div>Grand Prize Pos: # </div>
-                    <div>Points: </div>
+                    <div>Balance: {balance} ETH</div>
+                    {/* <div>Grand Prize Pos: # </div>
+                    <div>Points: </div> */}
                     <Anchor affix={false} targetOffset={64}>
                         <div className="menu">
                             <Button
